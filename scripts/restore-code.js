@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const GITHUB_REPO = 'git@github.com:poplovexz/enterprise-management.git';  // 使用 SSH 认证
+const GITHUB_REPO = 'https://github.com/poplovexz/qiyepingt.git';  // 更新为新的仓库地址
 const tagName = process.argv[2];
 
 // 显示使用说明

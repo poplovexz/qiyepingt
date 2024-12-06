@@ -4,7 +4,7 @@ const path = require('path');
 
 // 配置信息
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const GITHUB_REPO = 'git@github.com:poplovexz/enterprise-management.git';  // 使用 SSH 认证
+const GITHUB_REPO = 'https://github.com/poplovexz/qiyepingt.git';  // 更新为新的仓库地址
 
 // 获取Git信息函数
 function getGitInfo() {
@@ -54,7 +54,7 @@ async function main() {
   console.log('工作目录:', process.cwd());
 
   try {
-    // 检查是否已初始化Git仓库
+    // 检��是否已初始化Git仓库
     if (!fs.existsSync(path.join(PROJECT_ROOT, '.git'))) {
       console.log('正在初始化Git仓库...');
       execSync('git init', { stdio: 'inherit' });
