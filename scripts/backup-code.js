@@ -4,7 +4,7 @@ const path = require('path');
 
 // 配置信息
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const GITHUB_REPO = 'https://${GITHUB_TOKEN}@github.com/poplovexz/enterprise-management.git';  // 使用 token 认证
+const GITHUB_REPO = 'git@github.com:poplovexz/enterprise-management.git';  // 使用 SSH 认证
 
 // 获取Git信息函数
 function getGitInfo() {
