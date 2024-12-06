@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const GITHUB_REPO = 'https://github.com/your-username/your-repo.git';  // 需要替换为实际的仓库地址
+const GITHUB_REPO = 'https://${GITHUB_TOKEN}@github.com/poplovexz/enterprise-management.git';  // 使用 token 认证
 const tagName = process.argv[2];
 
 // 显示使用说明

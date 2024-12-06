@@ -4,7 +4,7 @@ const path = require('path');
 
 // 配置信息
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const GITHUB_REPO = 'https://github.com/your-username/your-repo.git';  // 需要替换为实际的仓库地址
+const GITHUB_REPO = 'https://${GITHUB_TOKEN}@github.com/poplovexz/enterprise-management.git';  // 使用 token 认证
 
 // 获取Git信息函数
 function getGitInfo() {

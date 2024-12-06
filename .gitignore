@@ -4,3 +4,5 @@ backup/
 
 # Portable tools
 scripts/portable-7zip/7za.exe
+node_modules
+node_modules
