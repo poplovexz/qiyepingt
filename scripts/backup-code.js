@@ -54,7 +54,7 @@ async function main() {
   console.log('工作目录:', process.cwd());
 
   try {
-    // 检��是否已初始化Git仓库
+    // 检是否已初始化Git仓库
     if (!fs.existsSync(path.join(PROJECT_ROOT, '.git'))) {
       console.log('正在初始化Git仓库...');
       execSync('git init', { stdio: 'inherit' });
@@ -76,7 +76,12 @@ async function main() {
     
     // 推送到远程仓库
     console.log('正在推送到GitHub...');
-    execSync('git push origin master', { stdio: 'inherit' });
+    try {
+      execSync('git push -u origin master', { stdio: 'inherit' });
+    } catch (error) {
+      // 如果master分支失败，尝试main分支
+      execSync('git push -u origin main', { stdio: 'inherit' });
+    }
     
     // 创建标签
     const tagName = `backup-${date}`;
