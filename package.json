@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "axios": "^1.7.9",
+    "element-plus": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "cross-env": "^7.0.3",
+    "shelljs": "^0.8.5"
+  },
+  "scripts": {
+    "backup:db": "node scripts/backup-db.js",
+    "backup:code": "node scripts/backup-code.js",
+    "restore:db": "node scripts/restore-db.js",
+    "restore:code": "node scripts/restore-code.js",
+    "version:major": "node scripts/version-control.js major",
+    "version:minor": "node scripts/version-control.js minor",
+    "version:patch": "node scripts/version-control.js patch",
+    "rollback": "node scripts/version-control.js rollback",
+    "setup": "node scripts/setup.js",
+    "postinstall": "node scripts/setup.js"
+  }
+}
